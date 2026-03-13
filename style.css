@@ -212,6 +212,12 @@ body {
     color:#98173d;
 }
 
+.card-inicio img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
     .sidebar {
