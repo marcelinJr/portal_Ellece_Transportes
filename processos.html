@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Ellece - Processos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+
+    <aside class="sidebar">
+        <div class="logo">🚛 Ellece</div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="processos.html" class="ativo">📦 Processos</a>
+            <a href="treinamentos.html">🎓 Treinamentos</a>
+            <a href="links.html">🔗 Links úteis</a>
+        </nav>
+    </aside>
+
+    <div class="main">
+        <div class="topbar">
+            <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+            <input type="text" id="busca" placeholder="Buscar processo..." onkeyup="filtrarCards()">
+        </div>
+
+        <section class="conteudo">
+            <h1>📦 Processos Operacionais</h1>
+
+            <div class="cards">
+                <div class="card" onclick="mostrarProcesso('balao-vendas')">📦 Cross / Fracionado</div>
+                <div class="card" onclick="mostrarProcesso('balao-suporte')">🚛 Lotação</div>
+                <div class="card" onclick="mostrarProcesso('balao-financeiro')">🔄 Transferência</div>
+            </div>
+
+            <div id="container-de-baloes">
+                <div class="balao-instrucao" id="balao-vendas">
+                    <h2>Orientação - Cross / Fracionado</h2>
+                    <ol>
+                        <li><span class="responsavel">Cross e Fracionado "Pandurata":</span>
+                            <span class="observacao">Emissões de Cross e Fracionado, atenção às particularidades.</span></li>
+                        <li><span class="observacao">1 CTe para 1 remessa. Se forem 5 remessas diferentes, gerar 5 CTes distintos.</span></li>
+                    </ol>
+                </div>
+                <div class="balao-instrucao" id="balao-suporte">
+                    <h2>Orientação - Lotação</h2>
+                    <ol>
+                        <li><span class="responsavel">Lotação "Pandurata / Barilla":</span>
+                            <span class="observacao">Subir XML no programa WinScp, sem necessidade de remessas individuais.</span></li>
+                    </ol>
+                </div>
+                <div class="balao-instrucao" id="balao-financeiro">
+                    <h2>Orientação - Transferência</h2>
+                    <ol>
+                        <li><span class="responsavel">TRANSFERÊNCIA "PANDURATA":</span>
+                            <span class="observacao">Transferência considerada por perfil de veículo, seguindo tabelas comerciais.</span></li>
+                    </ol>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
